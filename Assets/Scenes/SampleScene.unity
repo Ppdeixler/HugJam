@@ -883,6 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03d8c70758509742b7f61b41d828f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!114 &733660225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,6 +1644,10 @@ PrefabInstance:
     - target: {fileID: 5172438480068898498, guid: a5eb9b166b156ee47a2088150a15f7d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105923232569977338, guid: a5eb9b166b156ee47a2088150a15f7d8, type: 3}
+      propertyPath: selected
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
