@@ -8,14 +8,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 mousePosition;
 
     [SerializeField]
+
     private GameManager gameManager;
     private void Update()
     {
+
     }
-
-
-
-
     public void Click()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePosition), Vector2.zero);

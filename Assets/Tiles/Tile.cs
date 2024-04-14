@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    
+    [Header("Tile Properties")]
 
     public bool selected;
 
-    public float demolishChance;
+    public bool canBuild;
+
+    public bool built;
+
+    public terrain ActualTerrain;
 
     public SpriteRenderer spriteRenderer;
 
@@ -16,4 +22,11 @@ public class Tile : MonoBehaviour
         selected = true;
     }
 
+    public void DemolishStructure()
+    {
+
+    }
+
+    public enum terrain { River, Mountain, Grass, Forest }; 
+    
 }
