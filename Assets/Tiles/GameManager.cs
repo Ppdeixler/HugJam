@@ -1,41 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject grid;
+
+    [Header("Tilemap Informations")]
 
     [SerializeField]
-    private int cellMapX, cellMapY;
+    private Tilemap _tilemap;
+    [SerializeField]
+
+    private GameObject _tilePrefab;
+
+    [SerializeField] 
+    private int _mapSizeX, _mapSizeY;
 
     [SerializeField]
-    private GameObject[,] cells;
+    private Tile tile;
 
     private void Start()
     {
-        cells = new GameObject[cellMapX, cellMapY];
-
-        GetCells();
-        Debug.Log(cells);
-
+        InstantiateTileInfo();
+        Resources.GameStart();
     }
 
-    private void GetCells()
+    public void InstantiateTileInfo()
     {
-        
-
-        for (int i = 0; i < cellMapX; i++)
+        for (int i = 0; i < _mapSizeX; i++) 
         {
-            for (int b = 0; b < cellMapY; b++)
+            for (int b = 0; b < _mapSizeY; b++)
             {
-                for(int c = 0; c < grid.transform.childCount; c++)
+                var worldPosition = _tilemap.GetCellCenterWorld(new Vector3Int(i + _tilemap.origin.x,b + _tilemap.origin.y));
+                if (_tilemap.ContainsTile(tile))
                 {
-                    cells[i, b] = grid.transform.GetChild(c).gameObject;
 
-                    Destroy(cells[i, b]);
                 }
+                
+                Instantiate(_tilePrefab, worldPosition, Quaternion.identity);
+
+
             }
         }
     }
