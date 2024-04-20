@@ -84,10 +84,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    //Build Functions
+    //Blueprint
     public void MakeBlueprint()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePosition), Vector2.zero);
+
 
 
         if (hit.collider ==  null && tileGameObject != null)
@@ -127,25 +128,33 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
         if (tileGameObject.transform.GetChild(0).gameObject.GetComponentInChildren<Transform>().GetChild(0).gameObject.GetComponentInChildren<SpriteRenderer>().sprite != null)
         {
             return;
         }
 
+        _TileScript tilezin;
+
+        tilezin = tileGameObject.GetComponent<_TileScript>();
+
+        if (!tilezin.canBuild) return;
+
         tileGameObject.GetComponentInChildren<SpriteRenderer>().sprite = spriteAppearing;
 
     }
+
+
+    //Build Functions
     public void BuildHouse()
     {
         if (!tile.canBuild) return;
         if (tile.built) return;
-
+        if (Resources.houses <= 0) return;
         tile.BuildHere(_TileScript.builds.House);
         tile.built = true;
         tile.canBuild = false;
 
-        if (Resources.houses <= 0) return;
+        
         Resources.houses--;
 
         if(tileGameObject == null) return;
@@ -160,12 +169,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!tile.canBuild) return;
         if (tile.built) return;
+        if (Resources.firefightbuild <= 0) return;
 
         tile.BuildHere(_TileScript.builds.Firefight);
         tile.built = true;
         tile.canBuild = false;
 
-        if (Resources.firefightbuild <= 0) return;
+        
         Resources.firefightbuild--;
 
         if (tileGameObject == null) return;
@@ -180,12 +190,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!tile.canBuild) return;
         if (tile.built) return;
+        if (Resources.hospital <= 0) return;
 
         tile.BuildHere(_TileScript.builds.Hospital);
         tile.built = true;
         tile.canBuild = false;
 
-        if (Resources.hospital <= 0) return;
+        
         Resources.hospital--;
 
         if (tileGameObject == null) return;

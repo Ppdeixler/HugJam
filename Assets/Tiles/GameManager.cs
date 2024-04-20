@@ -13,35 +13,30 @@ public class GameManager : MonoBehaviour
 
     private GameObject _tilePrefab;
 
-    [SerializeField] 
+    [SerializeField]
     private int _mapSizeX, _mapSizeY;
 
     [SerializeField]
-    private Tile tile;
+    public TileBase tileToCheck;
 
     private void Start()
     {
         InstantiateTileInfo();
         Resources.GameStart();
+
+        Debug.Log(_tilemap.size);
     }
 
     public void InstantiateTileInfo()
     {
-        for (int i = 0; i < _mapSizeX; i++) 
+        for (int i = 0; i < _tilemap.size.x; i++)
         {
-            for (int b = 0; b < _mapSizeY; b++)
+            for (int b = 0; b < _tilemap.size.x; b++)
             {
-                var worldPosition = _tilemap.GetCellCenterWorld(new Vector3Int(i + _tilemap.origin.x,b + _tilemap.origin.y));
-                if (_tilemap.ContainsTile(tile))
-                {
-
-                }
-                
+                Vector3 worldPosition = _tilemap.GetCellCenterWorld(new Vector3Int(i + _tilemap.origin.x, b + _tilemap.origin.x));
+   
                 Instantiate(_tilePrefab, worldPosition, Quaternion.identity);
-
-
             }
         }
     }
-
-}
+}   
