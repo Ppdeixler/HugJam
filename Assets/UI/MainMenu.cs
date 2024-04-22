@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("MainMenuThemeLoop");
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
