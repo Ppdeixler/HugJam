@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2532683719470531904}
   - component: {fileID: 258384879294615233}
   - component: {fileID: 256155823417087847}
+  - component: {fileID: 8916366374006696478}
   m_Layer: 0
   m_Name: Tileprefab
   m_TagString: Untagged
@@ -98,10 +99,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBuild: 1
   built: 0
-  ActualTerrain: 0
+  ActualTerrain: 2
   spriteRenderer: {fileID: 5170930884741460846}
   ActualBuild: 0
   selected: 0
+--- !u!50 &8916366374006696478
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136502549537797549}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &4297181545798271923
 GameObject:
   m_ObjectHideFlags: 0

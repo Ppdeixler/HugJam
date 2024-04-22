@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
             {
                 Vector3 worldPosition = _tilemap.GetCellCenterWorld(new Vector3Int(i + _tilemap.origin.x, b + _tilemap.origin.x));
    
-                Instantiate(_tilePrefab, worldPosition, Quaternion.identity);
+                Instantiate(_tilePrefab, worldPosition, Quaternion.identity, this.transform);
             }
         }
     }
