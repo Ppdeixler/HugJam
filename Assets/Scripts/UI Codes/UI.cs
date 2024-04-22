@@ -60,6 +60,8 @@ public class UI : MonoBehaviour
     {
         Time.timeScale = 1f;
         gameIsPaused = false;
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("MainMenuThemeLoop");
         SceneManager.LoadScene(menuScene);
     }
 

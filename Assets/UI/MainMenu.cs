@@ -7,14 +7,13 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public string gameScene = "Game";
     public AudioMixer audioMixer;
     public TMPro.TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("MainMenuThemeLoop");
-
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -41,7 +40,9 @@ public class MainMenu : MonoBehaviour
 
     //Main Menu
     public void StartGame() {
-        SceneManager.LoadSceneAsync("Game");
+        FindObjectOfType<AudioManager>().Stop("MainMenuThemeLoop");
+        FindObjectOfType<AudioManager>().Play("Theme");
+        SceneManager.LoadSceneAsync(gameScene);
     }
 
     public void QuitGame() {
@@ -69,5 +70,11 @@ public class MainMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    //Click audio
+    public void onClickSfx()
+    {
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 }

@@ -786,6 +786,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &178669549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,8 +867,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 508574299}
-  - {fileID: 178669547}
   - {fileID: 805439778}
+  - {fileID: 178669547}
   m_Father: {fileID: 1828750851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1529,6 +1541,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &408823940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,6 +2032,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2575,6 +2611,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1567633157}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3310,16 +3358,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-
-    molestiae
-    quas vel sint commodi repudiandae consequuntur voluptatum laborum
-
-    numquam
-    blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-
-    optio,
-    eaque rerum! Provident similique accusantium nemo autem.'
+  m_text: "Sendo gerente de constru\xE7\xF5es da Cladis, voc\xEA \xE9 encarregado
+    de autorizar, ou n\xE3o, constru\xE7\xF5es nessa cidade. Para fazer isso voc\xEA
+    deve analisar as consequ\xEAncias ambientais das obras e como resolver, ou evitar,
+    futuros desastres\_naturais."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89b1503d611190940a28ceab04a7f791, type: 2}
   m_sharedMaterial: {fileID: -7534094444676432870, guid: 89b1503d611190940a28ceab04a7f791, type: 2}
@@ -3658,8 +3700,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 650a281504aadd8408d9b6721d456921, type: 2}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: MyMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 650a281504aadd8408d9b6721d456921, type: 2}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a68adf1adc15d44989b41c8b1f6741e, type: 3}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: MainMenuTheme
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[2].clip
@@ -3667,23 +3733,23 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0a68adf1adc15d44989b41c8b1f6741e, type: 3}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[2].loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[2].name
-      value: MainMenuTheme
+      value: MainMenuThemeLoop
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 0a68adf1adc15d44989b41c8b1f6741e, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e03f3b4d0cd072498086b7532f66eea, type: 3}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[3].loop
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[3].name
-      value: MainMenuThemeLoop
+      value: Theme
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[2].pitch
@@ -3699,7 +3765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8370984738453639649, guid: 7cdaf2ad661a272428164a0baf971378, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 0.694
+      value: 0.514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3871,9 +3937,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 676994342}
-  - {fileID: 408823938}
   - {fileID: 2041151340}
   - {fileID: 548822769}
+  - {fileID: 408823938}
   m_Father: {fileID: 68168345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4643,6 +4709,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1208998218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,6 +5138,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1567633157}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -5827,6 +5917,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2020876318}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6944,6 +7046,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2020876318}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: onClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1567633157}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7715,6 +7829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983be9c531fa4ae4e998f57d66957d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScene: Game
   audioMixer: {fileID: 24100000, guid: 650a281504aadd8408d9b6721d456921, type: 2}
   resolutionDropdown: {fileID: 1534521771}
 --- !u!1 &2023962887
