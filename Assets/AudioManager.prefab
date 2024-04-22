@@ -57,3 +57,16 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: PlaceBuilding
+    clip: {fileID: 8300000, guid: 91b61c51f2034d14b983e9ddb26c084f, type: 3}
+    volume: 0.694
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Demolish
+    clip: {fileID: 8300000, guid: 861d5160edf906c4f8d5cd3c31ee8583, type: 3}
+    volume: 0.694
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  audioMixer: {fileID: 0}

@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public TileBase tileToCheck;
 
+    [SerializeField]
+    private TurnMath _turnMath;
+
     private void Start()
     {
         InstantiateTileInfo();
@@ -38,5 +41,8 @@ public class GameManager : MonoBehaviour
                 Instantiate(_tilePrefab, worldPosition, Quaternion.identity, this.transform);
             }
         }
+        _turnMath.isObjectsInstantiated = true;
+
+
     }
 }   

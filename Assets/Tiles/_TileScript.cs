@@ -35,6 +35,7 @@ public class _TileScript : MonoBehaviour
     public void BuildHere(builds buildsType)
     {
         ActualBuild = buildsType;
+        FindObjectOfType<AudioManager>().Play("Build");
     }
 
     public void DemolishHere()
@@ -46,6 +47,8 @@ public class _TileScript : MonoBehaviour
         built = false;
 
         spriteRenderer.sprite = null;
+
+        FindObjectOfType<AudioManager>().Play("Demolish");
 
     }
 

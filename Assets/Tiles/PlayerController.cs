@@ -28,10 +28,15 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteOfBuilding;
 
+    [SerializeField]
+    private TurnMath turnScript;
+
+
 
     private void Update()
     {
         MakeBlueprint();
+
     }
     public void Click()
     {
@@ -58,10 +63,16 @@ public class PlayerController : MonoBehaviour
             case EMode.MoveBuilding:
                 break;
             default: break;
+            }
 
-
-
+        if(Resources.houses <= 0 && Resources.hospital <= 0 && Resources.firefightbuild <= 0 && TurnMath.inReport == false)
+        {
+            turnScript.ReportStart();
         }
+
+
+       
+
         //The old selecting system
         if (tile.selected)
         {
@@ -162,6 +173,8 @@ public class PlayerController : MonoBehaviour
         spriteOfBuilding = tileGameObject.transform.GetChild(0).gameObject.GetComponentInChildren<Transform>().GetChild(0).gameObject.GetComponentInChildren<SpriteRenderer>();
 
         tileGameObject.transform.GetChild(0).gameObject.GetComponentInChildren<Transform>().GetChild(0).gameObject.GetComponentInChildren<SpriteRenderer>().sprite = spriteAppearing;
+
+        
             
     }
 
